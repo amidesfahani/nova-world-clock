@@ -1,0 +1,34 @@
+{
+    "name": "amidesfahani/world-clock",
+    "description": "A Laravel Nova card to display World Clocks",
+    "keywords": [
+        "laravel",
+        "nova",
+        "card",
+        "time",
+        "clock",
+        "world"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/nova": "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "AmidEsfahani\\WorldClock\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AmidEsfahani\\WorldClock\\CardServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
