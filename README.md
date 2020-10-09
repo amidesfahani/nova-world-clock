@@ -6,7 +6,7 @@ A Laravel Nova card to display World Clocks
 You can install the package in to a Laravel app that uses Nova via composer:
 
 ```bash
-composer require naif/world-clock
+composer require amidesfahani/nova-world-clock
 ```
 
 ## Usage:
