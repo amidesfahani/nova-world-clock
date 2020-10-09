@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use AmidEsfahani\WorldClock\Http\Controllers\ClockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +14,8 @@ use AmidEsfahani\WorldClock\Http\Controllers\ClockController;
 |
 */
 
-Route::post('/get_times', 'AmidEsfahani\WorldClock\Http\Controllers\WorldClockController@getTimes');
+// Route::get('/endpoint', function (Request $request) {
+//     //
+// });
+
+Route::post('/get_times', 'AmidEsfahani\NovaWorldClock\Http\Controllers\WorldClockController@getTimes');
