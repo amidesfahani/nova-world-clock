@@ -1,11 +1,11 @@
 <?php
 
-namespace AmidEsfahani\WorldClock;
+namespace AmidEsfahani\NovaWorldClock;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
 class CardServiceProvider extends ServiceProvider
 {
@@ -21,8 +21,8 @@ class CardServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('world-clock', __DIR__.'/../dist/js/card.js');
-            Nova::style('world-clock', __DIR__.'/../dist/css/card.css');
+            Nova::script('NovaWorldClock', __DIR__.'/../dist/js/card.js');
+            Nova::style('NovaWorldClock', __DIR__.'/../dist/css/card.css');
         });
     }
 
@@ -38,7 +38,7 @@ class CardServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-                ->prefix('nova-vendor/world-clock')
+                ->prefix('nova-vendor/nova-world-clock')
                 ->group(__DIR__.'/../routes/api.php');
     }
 
