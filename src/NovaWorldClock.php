@@ -1,11 +1,10 @@
 <?php
 
-namespace AmidEsfahani\WorldClock;
+namespace AmidEsfahani\NovaWorldClock;
 
-use Illuminate\Support\Carbon;
 use Laravel\Nova\Card;
 
-class WorldClock extends Card
+class NovaWorldClock extends Card
 {
     /**
      * The width of the card (1/3, 1/2, or full).
@@ -21,7 +20,7 @@ class WorldClock extends Card
      */
     public function component()
     {
-        return 'world-clock';
+        return 'NovaWorldClock';
     }
 
     public function timezones($timezones) {
@@ -41,6 +40,18 @@ class WorldClock extends Card
     public function updatePeriod($ms = 1000) {
         return $this->withMeta([
             'ms' => $ms
+        ]);
+    }
+
+    public function showTitle($value = true) {
+        return $this->withMeta([
+            'showtitle' => $value
+        ]);
+    }
+
+    public function title($title = '') {
+        return $this->withMeta([
+            'title' => $title
         ]);
     }
 }
