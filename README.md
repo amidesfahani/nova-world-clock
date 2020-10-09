@@ -46,7 +46,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
 ```
 
-<img src="https://raw.githubusercontent.com/amidesfahani/nova-world-clock/master/screenshots/screenshot.png" width="431">
+<img src="https://raw.githubusercontent.com/amidesfahani/nova-world-clock/main/screenshots/screenshot.png" width="431">
 
 ## License:
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
