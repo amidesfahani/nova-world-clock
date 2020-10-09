@@ -1,6 +1,6 @@
 <?php
 
-namespace AmidEsfahani\WorldClock\Http\Controllers;
+namespace AmidEsfahani\NovaWorldClock\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -10,7 +10,7 @@ class WorldClockController
     public function getTimes(Request $request)
     {
         if (!$request->timeFormat){
-            $request->timeFormat = 'h:i:s';
+            $request->timeFormat = 'H:i:s';
         }
         $times = [];
         foreach ($request->timezones as $timezone){
@@ -19,7 +19,7 @@ class WorldClockController
             $name = explode('/',$time->getTimezone()->getName())[1];
             $name = str_replace('_',' ',$name);
             array_push($times,[
-                'name'=> ucwords($name),
+                'name'=> __(ucwords($name)),
                 'time'=> $time->format($request->timeFormat),
                 'night'=> $night
             ]);
