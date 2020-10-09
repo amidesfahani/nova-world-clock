@@ -17,7 +17,7 @@ namespace App\Providers;
 
 [...]
 
-use AmidEsfahani\WorldClock\WorldClock;
+use AmidEsfahani\NovaWorldClock\NovaWorldClock;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -27,7 +27,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
   public function card()
   {
       return [
-         (new WorldClock())
+         (new NovaWorldClock())
             ->timezones([
                 'Asia/Tehran',
                 'America/new_york',
@@ -35,6 +35,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             ])
             ->timeFormat('h:i') //Optional time format default is: 'h:i:s'
             ->updatePeriod(1000) //Optional to set updating time period in millisecond default is 1000 ms = 1 second
+            ->title(__('World Clock'))
+            ->showTitle(true)
       ];
   }
 
@@ -44,7 +46,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
 ```
 
-<img src="https://raw.githubusercontent.com/naifalshaye/worldclock/master/screenshots/screenshot.png" width="350">
+<img src="https://raw.githubusercontent.com/amidesfahani/nova-world-clock/master/screenshots/screenshot.png" width="431">
 
 ## License:
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
